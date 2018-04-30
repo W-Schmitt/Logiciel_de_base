@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{minted}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{dirtree}
+\setlength{\parindent}{0pt}
+\geometry{total={210mm,297mm},
+left=25mm,right=25mm,
+top=25mm,bottom=25mm}
+
+
+\title{Logiciels de base}
+\author{William SCHMITT}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Subtilités de C99 et rappels de ANSI C}
+
+\subsection{Printf et Scanf}
+
+Utiliser PRId32 ou SCNd32 pour les print/scan remplace ces valeurs par les bons
+caractères de formatage.
+
+\subsection{Tableaux}
+
+\paragraph{Tableaux à taille variable}
+\begin{minted}{C}
+  uint16_t taille;
+  scanf("%" SCNu16, &taille);
+  int32_t tab[taille];
+\end{minted}
+
+\paragraph{Tableaux 2D}
+\begin{minted}{C}
+  /**
+   * Les tableaux 2D sont à plat en mémoire.
+   */
+  char tab[3][5];
+\end{minted}
+
+\end{document}
