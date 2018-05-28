@@ -5,11 +5,11 @@ void interrupt_clavier(void)
   uint8_t o = inb(KEYBOARD_PORT);
   uint8_t m = 0x80;
   if (o < m) {
-    traite_car(get_scancode(o));
+    traite_car(get_charcode(o));
   }
 }
 
-char get_scancode(uint8_t o)
+char get_charcode(uint8_t o)
 {
   switch (o) {
     case 0x10:

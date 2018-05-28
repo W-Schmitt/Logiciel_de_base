@@ -4,6 +4,18 @@
 #include "segment.h"
 #include "date.h"
 
-void traitant_IT_33(void);
+/**
+ * Gère les interruptions 40
+ */
 void interrupt_clavier(void);
-char get_scancode(uint8_t o);
+
+/**
+ * Récupère le caractère associé au scancode (de mon clavier, tout ne fonctionne
+ *  peut-être pas)
+ */
+char get_charcode(uint8_t o);
+
+/**
+ * Déclaration pour la fonction assembleur associée
+ */
+void traitant_IT_33(void);
