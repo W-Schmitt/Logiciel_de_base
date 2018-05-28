@@ -35,7 +35,8 @@ caractères de formatage.
 
 \subsection{Tableaux}
 
-\paragraph{Tableaux à taille variable}
+\paragraph{Tableaux à taille variable} possibilité de déclarer un tableau sans
+constante pour la taille.
 \begin{minted}{C}
   uint16_t taille;
   scanf("%" SCNu16, &taille);
@@ -48,6 +49,14 @@ caractères de formatage.
    * Les tableaux 2D sont à plat en mémoire.
    */
   char tab[3][5];
+\end{minted}
+
+\paragraph{Tableaux et pointeurs}
+
+
+Pas de tableaux en C, uniquement des pointeurs vers la première case.
+\begin{minted}{C}
+  tab[3] == *(tab + 3)
 \end{minted}
 
 \end{document}

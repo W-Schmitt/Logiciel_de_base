@@ -3,12 +3,12 @@
 #include <stdlib.h>
 #include <inttypes.h>
 
-void echange(int32_t a, int32_t b)
+void echange(int32_t* a, int32_t* b)
 {
     int32_t t;
-    t = a;
-    a = b;
-    b = t;
+    t = *a;
+    *a = *b;
+    *b = t;
 }
 
 int32_t *fct1(void)
@@ -69,7 +69,7 @@ int main(void)
     int32_t a = 5;
     int32_t b = 7;
     printf("Valeurs initiales : a = %" PRId32 ", b = %" PRId32 "\n", a, b);
-    echange(a, b);
+    echange(&a, &b);
     printf("Valeurs echangees : a = %" PRId32 ", b = %" PRId32 "\n", a, b);
     puts("");
     int32_t *x = fct1();

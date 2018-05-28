@@ -2,7 +2,7 @@ BINS = fact segf mem testliste simple
 MODS = liste_bugs
 
 CC = gcc
-CFLAGS = -m64 -std=gnu99 -g -Wall -Wextra -Werror
+CFLAGS = -m64 -std=gnu99 -g -Wall -Wextra
 LD = gcc
 LDFLAGS = -m64
 
