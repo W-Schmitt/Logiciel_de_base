@@ -63,3 +63,8 @@
 #define DATE_REG_CENT 0x32
 
 #define KEYBOARD_PORT 0x60
+
+#define PROCESS_TABLE_SIZE 2
+
+#define TRUE 1
+#define FALSE 0
